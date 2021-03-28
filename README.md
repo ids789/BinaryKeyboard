@@ -8,7 +8,7 @@ Build a phone or tablet input device for use while flying a plane.  To be used f
 - Must be able to type quickly and comfortably, even during turbulence.  
 - Must be able to use it without looking and when under high work load while doing other tasks.  
 
-*This is an alternative to a another project for the same purpose [link](https://github.com/ids789/ChordedKeyboardFirmware)
+*This is an alternative to another project for the same purpose [link](https://github.com/ids789/ChordedKeyboardFirmware)
 
 ##### Concept
 Build small lightweight input device which converts standard Morse code sequences into key presses.  
