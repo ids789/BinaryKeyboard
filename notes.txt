@@ -1,0 +1,76 @@
+Enable RTT:
+- in pca10040/s132/config/sdk_config.h
+  set NRF_LOG_BACKEND_SERIAL_USES_UART to 1
+- Server: JLinkExe -device NRF52 -if SWD -speed 4000 -autoconnect 1
+- Client: JLinkRTTClient
+
+
+Compile:
+- go to: pca10040/s132/armgcc
+- run make, make flash_softdevice, make flash
+
+NRF52 Pinout: https://old.reddit.com/r/adafruit/comments/e2fb4s/adafruit_feather_nrf52840_express_nr_of_usable/
+
+
+
+
+
+Keyboard:
+static void buttons_leds_init(bool * p_erase_bonds)
+static void flash_led(bool state)
+static enum button_event debounce_button(button_reading * button, uint32_t pin)
+static void process_code()
+
+Bluetooth:
+static void on_hids_evt(ble_hids_t * p_hids, ble_hids_evt_t * p_evt)
+static void on_adv_evt(ble_adv_evt_t ble_adv_evt)
+static void ble_evt_handler(ble_evt_t const * p_ble_evt, void * p_context)
+static void ble_stack_init(void)
+static void peer_manager_init(void)
+static void advertising_init(void)
+static void advertising_start(bool erase_bonds)
+static void ble_advertising_error_handler(uint32_t nrf_error)
+static void whitelist_set(pm_peer_id_list_skip_t skip)
+static void gap_params_init(void)
+static void delete_bonds(void)
+static void identities_set(pm_peer_id_list_skip_t skip)
+static void pm_evt_handler(pm_evt_t const * p_evt)
+static void bas_init(void)
+static void dis_init(void)
+static void qwr_init(void)
+static void hids_init(void)
+static uint32_t send_key_scan_press_release(ble_hids_t * p_hids,
+static void keys_send(uint8_t key_pattern_len, uint8_t * p_key_pattern)
+static void conn_params_error_handler(uint32_t nrf_error)
+static void buffer_init(void)
+static void services_init(void)
+static void conn_params_init(void)
+static void on_hid_rep_char_write(ble_hids_evt_t * p_evt)
+static uint32_t buffer_enqueue(ble_hids_t * p_hids,
+static uint32_t buffer_dequeue(bool tx_flag)
+static void nrf_qwr_error_handler(uint32_t nrf_error)
+static void battery_level_update(void)
+
+Timers:
+static void timers_init(void)
+static void battery_level_meas_timeout_handler(void * p_context)
+static void btn_poll_timeout_handler(void * p_context)
+static void led_blink_timeout_handler(void * p_context)
+static void code_advance_timeout_handler(void * p_context)
+static void inactive_timeout_handler(void * p_context)
+static void handle_both_btn_press()
+static void timers_start(void)
+void extend_inactive_timer() {
+static void start_code_advance_timer(void) {
+
+System:
+static void log_init(void)
+static void idle_state_handle(void)
+static void idle_state_handle(void)
+static void power_management_init(void)
+static void scheduler_init(void)
+static void sensor_simulator_init(void)
+static void sleep_mode_enter(bool all_btns_wake)
+void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
+static void service_error_handler(uint32_t nrf_error)
+int main(void)
